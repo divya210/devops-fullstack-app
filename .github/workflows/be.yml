@@ -20,9 +20,14 @@ jobs:
       #     password: ${{ secrets.DOCKERHUB_TOKEN }}
       #     logout: false
 
-      
-      - name: build and push docker image to registry
+      - name: Build and push
         uses: docker/build-push-action@v5
         with:
           context: backend/
-          tags: divya2199/techverito_be:latest
+          push: true
+          tags: ${{ secrets.DOCKERHUB_USERNAME }}/techverito_be:latest
+      # - name: build and push docker image to registry
+      #   uses: docker/build-push-action@v5
+      #   with:
+      #     context: backend/
+      #     tags: divya2199/techverito_be:latest
