@@ -5,6 +5,7 @@ on:
 env:
   USERNAME: ${{secrets.DOCKERHUB_USERNAME}} 
   TOKEN: ${{secrets.DOCKERHUB_TOKEN}}
+  
 jobs:
   push_to_registry:
     name: push docker image to hub
