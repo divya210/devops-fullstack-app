@@ -2,9 +2,6 @@ name: Backend dockerization
 
 on: 
   push:
-env:
-  USERNAME: ${{secrets.DOCKERHUB_USERNAME}} 
-  TOKEN: ${{secrets.DOCKERHUB_TOKEN}}
   
 jobs:
   push_to_registry:
